@@ -1,0 +1,355 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+/* font-family: 'Noto Sans KR', sans-serif; */
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+/* XEION CDN */
+@import url('//cdn.jsdelivr.net/xeicon/2/xeicon.min.css');
+
+/* -------------------- Reset CSS -------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button, input {
+  outline: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+img {
+  /* vertical-align: middle; */
+}
+ol, ul {
+  list-style: none;
+}
+address, i, em {
+  font-style: normal;
+}
+
+/* -------------------- Default CSS -------------------- */
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 16px;
+  color: #222;
+}
+.inner {
+  width: 1200px;
+  margin: auto;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+/* -------------------- sub visual -------------------- */
+.sub-visual {
+  position: relative;
+  height: 400px;
+  background: url(../img/visual-bg.jpg) no-repeat center center / cover;
+  color: #fff;
+  text-align: center;
+}
+.sub-visual:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+.sub-visual .tit{
+  position: absolute;
+  top: calc((100% + 102px) / 2);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sub-visual .tit h2 {
+  font-size: 40px;
+  font-weight: 700;
+  animation: fadeTextDown 1s both;
+}
+.sub-visual .tit p{
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 300;
+  color: #eee;
+  animation: fadeTextDown 1s .4s both;
+}
+@keyframes fadeTextDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* -------------------- contnet -------------------- */
+.content {
+  margin-bottom: 120px;
+}
+.content .inner {
+  margin-top: 90px;
+  overflow: hidden;
+}
+.content .inner > div {
+  float: left;
+}
+.content .inner>div:nth-of-type(2) {
+  width: calc(100% - 300px);
+}
+.content .inner > div:nth-of-type(2) h2 {
+  position: relative;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+  font-size: 30px;
+  font-weight: 700;
+}
+.content .inner > div:nth-of-type(2) h2:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 4px;
+  background-color: #006bb7;
+}
+
+/* left-menu */
+.left-menu {
+  width: 240px;
+  margin-right: 60px;
+}
+.left-menu h3 {
+  height: 55px;
+  padding-left: 20px;
+  line-height: 55px;
+  background-color: #006bb7;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+.left-menu ul li {
+  height: 55px;
+  line-height: 55px;
+  border-bottom: 1px solid #ddd;
+  transition: 0.3s;
+}
+.left-menu ul li.on {
+  background-color: #ededed;
+}
+.left-menu ul li:hover {
+  background-color: #ededed;
+}
+.left-menu ul li a {
+  display: block;
+  padding-left: 20px;
+}
+.medical-content {
+  width: calc(100% - 300px);
+}
+
+/* medical search */
+.medical-search {
+  margin-bottom: 40px;
+  padding: 20px 0;
+  text-align: center;
+  border: 1px solid #ddd;
+  background-color: #ededed;
+  vertical-align: middle;
+}
+.medical-search p {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 26px;
+  transform: translateY(5px);
+}
+.medical-search .search-box {
+  display: inline-block;
+  position: relative;
+}
+.medical-search .search-box:before {
+  content: '\e97a';
+  font-family: xeicon;
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-54%);
+  font-size: 20px;
+  color: #ddd;
+}
+.medical-search .search-box input {
+  vertical-align: middle;
+  border: 1px solid #ddd;
+  width: 300px;
+  height: 50px;
+  padding-left: 35px;
+  margin-right: -6px;
+}
+.medical-search .search-box input::placeholder {
+  transition: 0.3s;
+}
+.medical-search .search-box input:focus::placeholder {
+  opacity: 0;
+}
+.medical-search .search-box button {
+  vertical-align: middle;
+  padding: 0 20px;
+  height: 50px;
+  border: none;
+  background-color: #006bb7;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* medical treat */
+.treat {
+  margin-bottom: 60px;
+}
+.treat-type {
+  overflow: hidden;
+}
+.treat-type div {
+  float: left;
+  width: 33.33333%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  border-right: 1px solid #ddd;
+  background-color: #eee;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.treat-type div.active {
+  background-color: #0AB0CF;
+  color: #fff;
+}
+.treat-type div:last-child {
+  border: none;
+}
+.treat-type div:hover {
+  background-color: #0AB0CF;
+  color: #fff;
+}
+.treat-box {
+  position: relative;
+}
+.treat-box div {
+  position: absolute;
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+.treat-box div.active {
+  display: block;
+}
+.treat-box div ul li {
+  display: inline-block;
+  width: calc(25% - 18px);
+  height: 40px;
+  margin-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  line-height: 40px;
+  border-radius: 40px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+.treat-box div ul li:nth-of-type(4n) {
+  margin-right: 0;
+}
+.treat-box div ul li:hover {
+  background-color: #0AB0CF;
+  color: #fff;
+}
+.treat-box div ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+/* medical box */
+.medical-box h3 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.doctor-list {
+  border-top: 2px solid #000;
+}
+.doctor-list > div {
+  padding: 15px 0;
+  overflow: hidden;
+  border-bottom: 1px solid #ddd;
+}
+.doctor-list > div img {
+  float: left;
+  height: 230px;
+}
+.doctor-info {
+  width: 640px;
+  float: right;
+}
+.doctor-info p {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 600;
+  border-bottom: 1px dashed #ddd;
+}
+.doctor-info > div {
+  height: 150px;
+  font-size: 14px;
+}
+.doctor-info ul {
+  float: left;
+  width: 50%;
+}
+.doctor-info ul li {
+  line-height: 1.7em;
+}
+.doctor-info ul li strong {
+  margin-right: 5px;
+}
+.doctor-info .btn {
+  float: right;
+}
+.doctor-info .btn a {
+  display: inline-block;
+  width: 140px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: 0.3s;
+}
+.doctor-info .btn a:first-child {
+  margin-right: 5px;
+  background-color: #0AB0CF;
+  color: #fff;
+}
+.doctor-info .btn a:last-child {
+  border: 1px solid #aaa;
+}
+.doctor-info .btn a:first-child:hover {
+  background-color: #109db6;
+}
+.doctor-info .btn a:last-child:hover {
+  background-color: #ededed;
+}
